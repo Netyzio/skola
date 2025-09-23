@@ -1,15 +1,25 @@
 public class Main {
     public static void main(String[] args) {
+        Bank bank1 = new Bank("Airbank");
+        Bank bank0 = new Bank("Mbank");
 
-        User lukas = new User("Lukas", "Sasek", 11);
-        BankAccount account001 = new BankAccount("62101", -1000000, lukas);
+        User a = new User("Petr Kukan");
+        BankAccount a0 = new BankAccount(-1000, a, bank0);
+        BankAccount a1 = new BankAccount(100, a, bank0);
 
-        User petr = new User("Petr", "Kukan", 16);
-        BankAccount account002 = new BankAccount("62102", 1000000, petr);
+        User b = new User("Petr Mesl");
+        BankAccount b0 = new BankAccount(1000, b, bank0);
+        BankAccount b1 = new BankAccount(1000, b, bank1);
 
 
-        Bank mbank = new Bank("6210","MBank");
+        System.out.println(bank0.getUserCount());
+        System.out.println(bank0.getTotalBalance());
 
+        System.out.println(bank1.getUserCount());
+        System.out.println(bank1.getTotalBalance());
+
+        System.out.println(a0.isInDebt());
+        System.out.println(a1.isInDebt());
 
     }
 }
