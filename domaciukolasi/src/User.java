@@ -1,11 +1,10 @@
 public class User {
-    private String firstName;
-    private String lastName;
-    private int age;
+    private final String fullName;
 
-    public User(String firstName, String lastName, int age) {
-this.firstName = firstName;
-this.lastName = lastName;
-this.age = age;
+    public User(String fullName) {
+        this.fullName = fullName;
+
     }
+
+
 }
